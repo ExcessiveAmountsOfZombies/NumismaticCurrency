@@ -1,4 +1,4 @@
-package com.epherical.bozo;
+package com.epherical.numiscurrency;
 
 import com.epherical.octoecon.api.BalanceProvider;
 import com.epherical.octoecon.api.Currency;
@@ -30,10 +30,10 @@ public class NumismaticBalanceProvider implements BalanceProvider {
             ServerPlayer player = server.getPlayerList().getPlayer(uniqueUser.getUserID());
             if (player != null)  {
                 ModComponents.CURRENCY.get(player).setValue((long) v);
-                return new com.epherical.bozo.NumismaticTransaction(v, currency, user, "Set virtual currency balance", Transaction.Response.SUCCESS, Transaction.Type.SET);
+                return new NumismaticTransaction(v, currency, user, "Set virtual currency balance", Transaction.Response.SUCCESS, Transaction.Type.SET);
             }
         }
-        return new com.epherical.bozo.NumismaticTransaction(0, currency, user, "Failed Set balance, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.SET);
+        return new NumismaticTransaction(0, currency, user, "Failed Set balance, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.SET);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class NumismaticBalanceProvider implements BalanceProvider {
             from.depositMoney(currency, v, to.getIdentity() + " received money from " + from.getIdentity() + ".");
             return transaction;
         }
-        return new com.epherical.bozo.NumismaticTransaction(0, currency, from, "Failed Set balance, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.SET);
+        return new NumismaticTransaction(0, currency, from, "Failed Set balance, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.SET);
     }
 
     @Override
@@ -52,10 +52,10 @@ public class NumismaticBalanceProvider implements BalanceProvider {
             ServerPlayer player = server.getPlayerList().getPlayer(uniqueUser.getUserID());
             if (player != null)  {
                 ModComponents.CURRENCY.get(player).modify((long) v);
-                return new com.epherical.bozo.NumismaticTransaction(v, currency, user, s, Transaction.Response.SUCCESS, Transaction.Type.DEPOSIT);
+                return new NumismaticTransaction(v, currency, user, s, Transaction.Response.SUCCESS, Transaction.Type.DEPOSIT);
             }
         }
-        return new com.epherical.bozo.NumismaticTransaction(0, currency, user, "Failed deposit, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.DEPOSIT);
+        return new NumismaticTransaction(0, currency, user, "Failed deposit, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.DEPOSIT);
     }
 
     @Override
@@ -64,10 +64,10 @@ public class NumismaticBalanceProvider implements BalanceProvider {
             ServerPlayer player = server.getPlayerList().getPlayer(uniqueUser.getUserID());
             if (player != null)  {
                 ModComponents.CURRENCY.get(player).modify((long) -v);
-                return new com.epherical.bozo.NumismaticTransaction(v, currency, user, s, Transaction.Response.SUCCESS, Transaction.Type.WITHDRAW);
+                return new NumismaticTransaction(v, currency, user, s, Transaction.Response.SUCCESS, Transaction.Type.WITHDRAW);
             }
         }
-        return new com.epherical.bozo.NumismaticTransaction(0, currency, user, "Failed withdraw, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.WITHDRAW);
+        return new NumismaticTransaction(0, currency, user, "Failed withdraw, not a UniqueUser", Transaction.Response.FAIL, Transaction.Type.WITHDRAW);
     }
 
 

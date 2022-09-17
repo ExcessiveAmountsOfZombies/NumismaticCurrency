@@ -1,4 +1,4 @@
-package com.epherical.bozo;
+package com.epherical.numiscurrency;
 
 import com.epherical.octoecon.api.Currency;
 import com.epherical.octoecon.api.transaction.Transaction;

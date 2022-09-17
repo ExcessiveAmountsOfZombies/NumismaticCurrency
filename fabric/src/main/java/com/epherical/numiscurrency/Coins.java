@@ -1,4 +1,4 @@
-package com.epherical.bozo;
+package com.epherical.numiscurrency;
 
 import com.epherical.octoecon.api.BalanceProvider;
 import com.epherical.octoecon.api.VirtualCurrency;
@@ -48,6 +48,6 @@ public class Coins implements VirtualCurrency {
 
     @Override
     public String getIdentity() {
-        return com.epherical.bozo.NumismaticCurrency.COINS.toString();
+        return NumismaticCurrency.COINS.toString();
     }
 }

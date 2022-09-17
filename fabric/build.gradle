@@ -37,10 +37,9 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-1.18.1:2021.12.19")
     }
-    shade(rootProject)
-    shadow(rootProject)
+    /*shade(rootProject)
+    shadow(rootProject)*/
 
-    testCompileOnly('org.jetbrains:annotations:23.0.0')
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
@@ -49,6 +48,7 @@ dependencies {
     modImplementation((files("lib/numismatic-overhaul-0.2.2+1.18.jar")))
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:4.1.3")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:4.1.3")
+    testCompileOnly('org.jetbrains:annotations:23.0.0')
 }
 
 processResources {

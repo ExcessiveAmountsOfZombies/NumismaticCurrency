@@ -18,7 +18,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.epherical.bozo.NumismaticCurrency"
+      "com.epherical.numiscurrency.NumismaticCurrency"
     ]
   },
   "mixins": [
