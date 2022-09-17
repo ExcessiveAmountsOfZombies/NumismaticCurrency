@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "bozoiD",
+  "id": "numismatic-currency",
   "version": "${version}",
-  "name": "BOZOID",
-  "description": "",
+  "name": "Numismatic Currency",
+  "description": "Add support for Numismatic Overhaul and the Octo Economy API",
   "authors": [
     "Thonk"
   ],
   "contact": {
-    "sources": "https://github.com/ExcessiveAmountsOfZombies/Professions",
-    "issues": "https://github.com/ExcessiveAmountsOfZombies/Professions/issues",
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/professions-fabric",
+    "sources": "https://github.com/ExcessiveAmountsOfZombies/NumismaticCurrency",
+    "issues": "https://github.com/ExcessiveAmountsOfZombies/NumismaticCurrency/issues",
+    "homepage": "",
     "irc": "https://discord.gg/GZjtAn3F6W"
   },
   "license": "LGPL-3.0",
@@ -18,21 +18,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.epherical.bozo.BozoFabric"
+      "com.epherical.bozo.NumismaticCurrency"
     ]
   },
   "mixins": [
-    "bozoiD.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
+    "octo-economy-api": ">=1.1.0",
+    "numismatic-overhaul": ">=0.2.2",
     "minecraft": "1.18.2"
-  },
-  "custom": {
-    "waila:plugins": {
-      "id": "professions:prof_waila",
-      "initializer": "com.epherical.professions.integration.wthit.ProfWailaPlugin"
-    }
   }
 }

@@ -12,8 +12,8 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'FabForgeTemplate'
+rootProject.name = 'NumismaticCurrency'
 
-include 'forge'
+//include 'forge'
 include 'fabric'
 
