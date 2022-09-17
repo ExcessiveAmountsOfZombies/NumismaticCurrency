@@ -48,6 +48,6 @@ public class Coins implements VirtualCurrency {
 
     @Override
     public String getIdentity() {
-        return NumismaticCurrency.COINS.toString();
+        return com.epherical.bozo.NumismaticCurrency.COINS.toString();
     }
 }
